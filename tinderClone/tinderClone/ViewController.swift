@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+var currentUser = ""
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var usenameField: UITextField!
@@ -23,6 +25,14 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getcurrentUser() -> String {
+        return currentUser
+    }
+    
+    func setcurrentUser(user:String) {
+        currentUser = user
     }
 
     @IBAction func loginButton(_ sender: Any) {
@@ -45,7 +55,8 @@ class ViewController: UIViewController {
             let result = try context.fetch(request)
             
             if result.count > 0 {
-                //sign in segue
+                performSegue(withIdentifier: "login", sender: self)
+                setcurrentUser(user: self.usenameField.text!)
             } else {
                 messageLabel.text = "Could not sign in"
             }
@@ -79,7 +90,7 @@ class ViewController: UIViewController {
                     let tempresult = try context.fetch(request)
                     result = tempresult as! [NSManagedObject]
                 } catch {
-                    messageLabel.text = "Could npt sign up"
+                    messageLabel.text = "Could not sign up"
                 }
                 
                 if result.count > 0 {

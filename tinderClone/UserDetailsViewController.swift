@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class UserDetailsViewController: UIViewController {
+    @IBOutlet weak var identitySwitch: UISwitch!
+    @IBOutlet weak var interestSwitch: UISwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +26,8 @@ class UserDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func updateButton(_ sender: Any) {
+    }
 
     /*
     // MARK: - Navigation

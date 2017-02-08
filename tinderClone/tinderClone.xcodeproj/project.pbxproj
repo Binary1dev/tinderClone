@@ -15,6 +15,13 @@
 		C80EDA7F1E4AB7870006C2EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C80EDA7D1E4AB7870006C2EC /* LaunchScreen.storyboard */; };
 		C80EDA871E4AB82E0006C2EC /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C80EDA861E4AB82E0006C2EC /* login.jpg */; };
 		C80EDA8B1E4AD0410006C2EC /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80EDA8A1E4AD0410006C2EC /* UserDetailsViewController.swift */; };
+		C80EDA8D1E4AD6680006C2EC /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = C80EDA8C1E4AD6680006C2EC /* profile.png */; };
+		C80EDA8F1E4AE7460006C2EC /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80EDA8E1E4AE7460006C2EC /* SwipeViewController.swift */; };
+		C80EDA911E4AF7530006C2EC /* human0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C80EDA901E4AF7530006C2EC /* human0.jpg */; };
+		C80EDA931E4AF77A0006C2EC /* human3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C80EDA921E4AF77A0006C2EC /* human3.jpg */; };
+		C80EDA951E4AF79E0006C2EC /* human4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C80EDA941E4AF79E0006C2EC /* human4.jpg */; };
+		C80EDA971E4AF7C50006C2EC /* human1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C80EDA961E4AF7C50006C2EC /* human1.jpg */; };
+		C80EDA991E4AF7DA0006C2EC /* human2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C80EDA981E4AF7DA0006C2EC /* human2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,13 @@
 		C80EDA801E4AB7870006C2EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C80EDA861E4AB82E0006C2EC /* login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login.jpg; sourceTree = "<group>"; };
 		C80EDA8A1E4AD0410006C2EC /* UserDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDetailsViewController.swift; path = ../UserDetailsViewController.swift; sourceTree = "<group>"; };
+		C80EDA8C1E4AD6680006C2EC /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		C80EDA8E1E4AE7460006C2EC /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		C80EDA901E4AF7530006C2EC /* human0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = human0.jpg; sourceTree = "<group>"; };
+		C80EDA921E4AF77A0006C2EC /* human3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = human3.jpg; sourceTree = "<group>"; };
+		C80EDA941E4AF79E0006C2EC /* human4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = human4.jpg; sourceTree = "<group>"; };
+		C80EDA961E4AF7C50006C2EC /* human1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = human1.jpg; sourceTree = "<group>"; };
+		C80EDA981E4AF7DA0006C2EC /* human2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = human2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +76,15 @@
 			children = (
 				C80EDA711E4AB7870006C2EC /* AppDelegate.swift */,
 				C80EDA731E4AB7870006C2EC /* ViewController.swift */,
+				C80EDA8E1E4AE7460006C2EC /* SwipeViewController.swift */,
 				C80EDA8A1E4AD0410006C2EC /* UserDetailsViewController.swift */,
 				C80EDA861E4AB82E0006C2EC /* login.jpg */,
+				C80EDA901E4AF7530006C2EC /* human0.jpg */,
+				C80EDA961E4AF7C50006C2EC /* human1.jpg */,
+				C80EDA981E4AF7DA0006C2EC /* human2.jpg */,
+				C80EDA921E4AF77A0006C2EC /* human3.jpg */,
+				C80EDA8C1E4AD6680006C2EC /* profile.png */,
+				C80EDA941E4AF79E0006C2EC /* human4.jpg */,
 				C80EDA751E4AB7870006C2EC /* Main.storyboard */,
 				C80EDA7B1E4AB7870006C2EC /* Assets.xcassets */,
 				C80EDA7D1E4AB7870006C2EC /* LaunchScreen.storyboard */,
@@ -133,8 +154,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C80EDA7F1E4AB7870006C2EC /* LaunchScreen.storyboard in Resources */,
+				C80EDA991E4AF7DA0006C2EC /* human2.jpg in Resources */,
+				C80EDA951E4AF79E0006C2EC /* human4.jpg in Resources */,
+				C80EDA911E4AF7530006C2EC /* human0.jpg in Resources */,
 				C80EDA871E4AB82E0006C2EC /* login.jpg in Resources */,
+				C80EDA931E4AF77A0006C2EC /* human3.jpg in Resources */,
 				C80EDA7C1E4AB7870006C2EC /* Assets.xcassets in Resources */,
+				C80EDA8D1E4AD6680006C2EC /* profile.png in Resources */,
+				C80EDA971E4AF7C50006C2EC /* human1.jpg in Resources */,
 				C80EDA771E4AB7870006C2EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C80EDA8F1E4AE7460006C2EC /* SwipeViewController.swift in Sources */,
 				C80EDA7A1E4AB7870006C2EC /* tinderClone.xcdatamodeld in Sources */,
 				C80EDA741E4AB7870006C2EC /* ViewController.swift in Sources */,
 				C80EDA8B1E4AD0410006C2EC /* UserDetailsViewController.swift in Sources */,
