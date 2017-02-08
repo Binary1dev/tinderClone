@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="trb-Dh-FJw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="K39-2P-pJ4">
+                                <rect key="frame" x="99" y="484" width="177" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.5139744718" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nob-bD-lxQ">
+                                <rect key="frame" x="99" y="534" width="177" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHN-yi-994">
+                                <rect key="frame" x="124" y="589" width="38" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GWb-ag-DuU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkz-8T-6jb">
+                                <rect key="frame" x="206" y="589" width="55" height="30"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GHN-yi-994" firstAttribute="top" secondItem="Nob-bD-lxQ" secondAttribute="bottom" constant="25" id="Ak1-kI-bsa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rkz-8T-6jb" secondAttribute="trailing" constant="98" id="Nfp-ht-bzK"/>
+                            <constraint firstItem="Rkz-8T-6jb" firstAttribute="leading" secondItem="GHN-yi-994" secondAttribute="trailing" constant="44" id="RHg-Tj-dkw"/>
+                            <constraint firstItem="GHN-yi-994" firstAttribute="baseline" secondItem="Rkz-8T-6jb" secondAttribute="baseline" id="Sav-ur-sHp"/>
+                            <constraint firstItem="K39-2P-pJ4" firstAttribute="trailing" secondItem="Nob-bD-lxQ" secondAttribute="trailing" id="Xiw-Vi-aeu"/>
+                            <constraint firstItem="K39-2P-pJ4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="83" id="Zrd-yA-GDA"/>
+                            <constraint firstItem="Nob-bD-lxQ" firstAttribute="top" secondItem="K39-2P-pJ4" secondAttribute="bottom" constant="20" id="ccN-r1-J1l"/>
+                            <constraint firstItem="trb-Dh-FJw" firstAttribute="centerX" secondItem="K39-2P-pJ4" secondAttribute="centerX" id="e1P-Wd-seo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GHN-yi-994" secondAttribute="bottom" constant="48" id="eOV-3F-skK"/>
+                            <constraint firstItem="trb-Dh-FJw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iJw-u7-xaC"/>
+                            <constraint firstItem="K39-2P-pJ4" firstAttribute="leading" secondItem="Nob-bD-lxQ" secondAttribute="leading" id="tUX-OL-Fhl"/>
+                            <constraint firstAttribute="trailing" secondItem="trb-Dh-FJw" secondAttribute="trailing" id="tvi-Pj-7oC"/>
+                            <constraint firstItem="trb-Dh-FJw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uGQ-ut-KhB"/>
+                            <constraint firstItem="trb-Dh-FJw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="x2d-Dm-RTc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordField" destination="Nob-bD-lxQ" id="gcX-ko-6bt"/>
+                        <outlet property="usernameField" destination="K39-2P-pJ4" id="lel-yf-1Wy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="99"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login.jpg" width="5184" height="3456"/>
+    </resources>
+</document>
