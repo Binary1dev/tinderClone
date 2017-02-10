@@ -142,7 +142,7 @@
                     <connections>
                         <outlet property="profileImage" destination="tg3-p4-LR3" id="IxZ-0O-1UL"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="aiA-dR-Ytg"/>
-                        <segue destination="AjU-vZ-7YK" kind="show" identifier="userDetails" id="K9k-M5-anT"/>
+                        <segue destination="AjU-vZ-7YK" kind="show" identifier="userProfile" id="JWl-Qa-YO9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqx-5r-fwA" userLabel="First Responder" sceneMemberID="firstResponder"/>

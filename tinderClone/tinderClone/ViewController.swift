@@ -43,6 +43,8 @@ class ViewController: UIViewController {
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         
+        var result = [NSManagedObject]()
+        
         var predicates = [NSPredicate]()
         predicates.append(NSPredicate(format: "username = %@", usenameField.text!))
         predicates.append(NSPredicate(format: "password = %@", passwordField.text!))
@@ -52,19 +54,17 @@ class ViewController: UIViewController {
         request.returnsObjectsAsFaults = false
         
         do {
-            let result = try context.fetch(request)
-            
+            result = try context.fetch(request) as! [NSManagedObject]
+        } catch {
+            messageLabel.text = "Could not Sign Up"
+        }
+        
             if result.count > 0 {
                 performSegue(withIdentifier: "login", sender: self)
                 setcurrentUser(user: self.usenameField.text!)
             } else {
                 messageLabel.text = "Could not sign in"
             }
-            
-            
-        } catch {
-            messageLabel.text = "Could not sign in"
-        }
     }
 
     @IBAction func signUpButton(_ sender: Any) {
@@ -87,8 +87,7 @@ class ViewController: UIViewController {
                 request.returnsObjectsAsFaults = false
                 
                 do {
-                    let tempresult = try context.fetch(request)
-                    result = tempresult as! [NSManagedObject]
+                    result = try context.fetch(request) as! [NSManagedObject]
                 } catch {
                     messageLabel.text = "Could not sign up"
                 }

@@ -12,6 +12,8 @@ import CoreData
 class SwipeViewController: UIViewController {
 
     @IBOutlet weak var profileImage: UIImageView!
+    var person = 0
+    var profiles = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +21,6 @@ class SwipeViewController: UIViewController {
         // Do any additional setup after loading the view.
         let users = ["Girl","Lady","Female","Dude","Human"]
         
-        var profiles = [UIImage]()
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
@@ -27,17 +28,56 @@ class SwipeViewController: UIViewController {
         
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context)
         
+        let swipe = UIPanGestureRecognizer(target: self, action: #selector(self.swiped(gestureRecognizer:)))
+        
+        profileImage.addGestureRecognizer(swipe)
+        
         for (index, value) in users.enumerated() {
             newUser.setValue(value, forKey: "username")
-            newUser.setValue(index, forKey: "password")
+            newUser.setValue(String(index), forKey: "password")
             profiles.append(UIImage(named:"human"+String(index)+".jpg")!)
             do {
                 try context.save()
             } catch {
-                //fuck lol
+                print("couldn't create user")
             }
         }
+        
+        profileImage.image = profiles[person]
 
+    }
+    
+    func swiped(gestureRecognizer: UIPanGestureRecognizer) {
+        let translation = gestureRecognizer.translation(in: view)
+        
+        let image = gestureRecognizer.view as! UIImageView
+        
+        image.center = CGPoint(x: self.view.bounds.width / 2 + translation.x, y: self.view.bounds.height / 2 + translation.y)
+        
+        let xFromCenter = image.center.x - self.view.bounds.width / 2
+        
+        var rotation = CGAffineTransform(rotationAngle: xFromCenter / 200)
+        
+        let scale = min(abs(100/xFromCenter), 1)
+        
+        var stretchAndRotation = rotation.scaledBy(x: scale, y: scale)
+        
+        image.transform = stretchAndRotation
+        
+        if gestureRecognizer.state == UIGestureRecognizerState.ended {
+            if image.center.x < 100 && person < 4 {
+                person += 1
+                image.image = profiles[person]
+            } else if image.center.x > self.view.bounds.width - 100 && person > 0{
+                person -= 1
+                image.image = profiles[person]
+            }
+            rotation = CGAffineTransform(rotationAngle: 0)
+            stretchAndRotation = rotation.scaledBy(x: 1, y: 1)
+            image.transform = stretchAndRotation
+            image.center = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height / 2)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +86,7 @@ class SwipeViewController: UIViewController {
     }
     
     @IBAction func checkProfileButton(_ sender: Any) {
-        performSegue(withIdentifier: "userDetails", sender: self)
+        performSegue(withIdentifier: "userProfile", sender: self)
     }
     
     
